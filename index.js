@@ -82,7 +82,7 @@ bot.on('message', (msg) => {
         resize_keyboard: true,
         inline_keyboard: keyboard,
       }
-    }).then(() => counter = 0).catch(err => console.log(err));
+    }).then(() => counter = 0).catch(error => console.log(error));
   }
   else {
     // отправляем сообщение
@@ -92,7 +92,7 @@ bot.on('message', (msg) => {
         resize_keyboard: true,
         inline_keyboard: keyboard,
       }
-    }).then(() => counter++).catch(err => console.log(err));
+    }).then(() => counter++).catch(error => console.log(error));
   }
 });
 
