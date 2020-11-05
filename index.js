@@ -58,7 +58,7 @@ const inlinekeyboard = [
       text: 'Show img',
     },
     {
-      text: 'button 8',
+      text: 'Reset counter ⏳',
     }
   ]
 ];
@@ -75,6 +75,14 @@ bot.on('message', (msg) => {
         resize_keyboard: true
       }
     });
+  } else if (msg.text === 'Reset counter ⏳') {
+    bot.sendMessage(chatId, `Counter reseted`, { // прикрутим клаву
+      reply_markup: {
+        keyboard: inlinekeyboard,
+        resize_keyboard: true,
+        inline_keyboard: keyboard,
+      }
+    }).then(() => counter = 0);
   }
   else {
     // отправляем сообщение
