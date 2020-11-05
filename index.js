@@ -78,7 +78,7 @@ bot.on('message', (msg) => {
   }
   else {
     // отправляем сообщение
-    bot.sendMessage(chatId, `You clicked: ${msg.text}. Clicks counter is ${counter}`, { // прикрутим клаву
+    bot.sendMessage(chatId, `You clicked: ${msg.text}. \nClicks counter is ${counter}`, { // прикрутим клаву
       reply_markup: {
         keyboard: inlinekeyboard,
         resize_keyboard: true,
